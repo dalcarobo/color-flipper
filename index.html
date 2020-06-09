@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+
+<head>
+    <style>
+        * {
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        body {
+            background-color: #ffffff;
+            padding: 0;
+            margin: 0;
+        }
+
+        header {
+            display: flex;
+            top: 0;
+            width: 100vw;
+            background-color: #82abad;
+            color: #ffffff;
+            height: 80px;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 0 20px 0 #000000;
+        }
+
+        section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        section h1 {
+            font-size: 48px;
+        }
+
+        section button {
+            padding: 30px 40px;
+            border-radius: 8px;
+            border: none;
+            box-shadow: 0 0 20px 2px #8ccab7;
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        .bordered {
+            justify-content: space-between;
+            align-items: center;
+            flex-direction: column;
+            display: flex;
+            width: 50%;
+            margin: 30px;
+            padding: 20px;
+            border: 2px solid #000;
+            border-radius: 20px;
+        }
+
+        .span-hex {
+            font-size: 48px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        section#selected {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        section#selected div {
+            margin: 10px;
+            padding: 10px;
+            border: 1px solid #000;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h2>Color Flipper</h2>
+    </header>
+    <section>
+        <div class="bordered">
+            <h1>Background Color: <span></span></h1>
+            <span class="span-hex" id="span-hexcode">#ffffff</span>
+            <span class="span-hex" id="span-rgbcode">rgb(255,255,255)</span>
+            <div>
+                <button id="change">Change!</button>
+                <button id="select" value="#ffffff">Select!</button>
+            </div>
+        </div>
+    </section>
+    <section id="selected"></section>
+    <script src="index.js"></script>
+</body>
+
+</html>
